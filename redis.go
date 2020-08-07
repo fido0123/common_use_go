@@ -69,7 +69,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error: %v", err.Error())
 	}
-	log.Printf("Name: %s", value2.Name)
+	log.Printf("Name: %s ", value2.Name)
 	log.Printf("Email: %s", value2.Email)
 
 }
