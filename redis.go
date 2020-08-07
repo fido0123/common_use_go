@@ -30,7 +30,7 @@ func initialize() *redisClient {
 	})
 
 	if err := c.Ping(context.TODO()).Err(); err != nil {
-		panic("Unable to connect to redis " + err.Error())
+		panic("Unable to connect to  the redis " + err.Error())
 	}
 	client.c = c
 	return client
