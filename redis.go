@@ -42,9 +42,6 @@ func (client *redisClient) getKey(key string, src interface{}) error {
 		return err
 	}
 	err = json.Unmarshal([]byte(val), &src)
-	if err != nil {
-		return err
-	}
 	return nil
 }
 
