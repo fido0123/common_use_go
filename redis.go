@@ -60,13 +60,13 @@ func main() {
 	redisClient := initialize()
 	key1 := "sampleKey"
 	value1 := &valueEx{Name: "someName", Email: "dev2@abc.com"}
-	// err := redisClient.setKey(key1, value1, time.Minute*5)
+	err := redisClient.setKey(key1, value1, time.Minute*5)
 	// if err != nil {
 	// 	log.Fatalf("Error: %v", err.Error())
 	// }
 
 	value2 := &valueEx{}
-	err := redisClient.getKey(key1, value2)
+	err := redisClient.getKey(key2, value2)
 	if err != nil {
 		log.Fatalf("Error: %v", err.Error())
 	}
