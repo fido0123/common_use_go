@@ -23,7 +23,7 @@ type redisClient struct {
 	c *redis.Client
 }
 
-//GetClient get the redis client
+//GetClient get the redis client for init
 func initialize() *redisClient {
 	c := redis.NewClient(&redis.Options{
 		Addr: "127.0.0.1:6379",
