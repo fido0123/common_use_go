@@ -52,10 +52,8 @@ func (client *redisClient) setKey(key string, value interface{}, expiration time
 		return err
 	}
 	err = client.c.Set(context.TODO(), key, cacheEntry, expiration).Err()
-	if err != nil {
-		return err
-	}
-	return nil
+	
+	return err
 }
 func main() {
 	redisClient := initialize()
