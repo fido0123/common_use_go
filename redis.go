@@ -72,5 +72,6 @@ func main() {
 	}
 	log.Printf("Name: %s ", value2.Name)
 	log.Printf("Email: %s", value2.Email)
+	log.Panic("see")
 
 }
