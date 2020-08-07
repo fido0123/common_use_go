@@ -30,13 +30,13 @@ func initialize() *redisClient {
 	})
 
 	if err := c.Ping(context.TODO()).Err(); err != nil {
-		panic("Unable to connect to redis " + err.Error())
+		panic("Unable to connect to to the nnredis " + err.Error())
 	}
 	client.c = c
 	return client
 }
 
-//GetKey get key
+//GetKey get key to fetch
 func (client *redisClient) getKey(key string, src interface{}) error {
 	val, err := client.c.Get(context.TODO(), key).Result()
 	if err == redis.Nil || err != nil {
