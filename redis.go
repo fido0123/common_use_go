@@ -12,6 +12,7 @@ import (
 type valueEx struct {
 	Name  string
 	Email string
+	Tel   string
 }
 
 var (
@@ -52,7 +53,7 @@ func (client *redisClient) setKey(key string, value interface{}, expiration time
 		return err
 	}
 	err = client.c.Set(context.TODO(), key, cacheEntry, expiration).Err()
-	
+
 	return err
 }
 func main() {
