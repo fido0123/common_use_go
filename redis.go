@@ -58,8 +58,8 @@ func (client *redisClient) setKey(key string, value interface{}, expiration time
 }
 func main() {
 	redisClient := initialize()
-	key1 := "sampleKeys"
-	err := redisClient.setKey(key1, value1, time.Minute*5)
+	key1 := "sampleKey"
+	// err := redisClient.setKey(key1, value1, time.Minute*5)
 	// if err != nil {
 	// 	log.Fatalf("Error: %v", err.Error())
 	// }
